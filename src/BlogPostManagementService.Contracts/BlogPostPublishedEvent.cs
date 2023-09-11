@@ -16,7 +16,8 @@ public class BlogPostPublishedEvent : IntegrationEvent
         string authorId,
         DateTime publishDateTime,
         string feedbackEmailAddress,
-        DateTime createdAt) : base(EventName, createdAt)
+        DateTime raisedAt,
+        string eventName = EventName) : base(eventName, raisedAt)
     {
         BlogPostId = blogPostId;
         AuthorId = authorId;
